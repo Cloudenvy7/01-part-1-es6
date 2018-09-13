@@ -2,11 +2,11 @@
 
 // STEP 1
 // This is a standard function expression. You may also be familiar with function declarations, which begin with the "function" keyword.
-const theOldWay = function(course) {
+const theOldWay = (course) => {
   return `I am currently enrolled in ${course}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
+// DONE: Uncomment the following line of code to see the output in the browser console
 console.log('The old way:', theOldWay('Code 301'));
 
 
@@ -17,7 +17,7 @@ const theNewWay = (course) => {
   return `I am currently enrolled in ${course}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
+// DONE: Uncomment the following line of code to see the output in the browser console
 console.log('The new way:', theNewWay('Code 301'));
 
 
@@ -27,8 +27,8 @@ const withoutParens = course => {
   return `I am currently enrolled in ${course}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Without parens:', withoutParens('Code 301'));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Without parens:', withoutParens('Code 301'));
 
 
 // STEP 4
@@ -37,19 +37,19 @@ const withoutParens = course => {
 // Without an arrow function, we need to explicitly type "return"
 const oneLiner = course => `I cam currently enrolled in ${course}`;
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('As a one-liner:', oneLiner('Code 301'));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('As a one-liner:', oneLiner('Code 301'));
 
 
 // STEP 5
 // What if we have multiple parameters?
 // In a function expression, they all go in the parentheses
-const add = function(num1, num2) {
+const add = (num1, num2) => {
   return `${num1} + ${num2} = ${num1 + num2}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Let\'s do some math:', add(4, 5));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Let\'s do some math:', add(4, 5));
 
 
 // STEP 6
@@ -57,8 +57,8 @@ const add = function(num1, num2) {
 // We can only remove the parentheses when there is a single parameter
 const addOneLiner = (num1, num2) => `${num1} + ${num2} = ${num1 + num2}`;
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Add as a one-liner:', addOneLiner(4, 5));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Add as a one-liner:', addOneLiner(4, 5));
 
 
 // STEP 7
@@ -69,8 +69,8 @@ const multiLiner = word => {
   return word;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Multi-line arrow function:', multiLiner('hello'));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Multi-line arrow function:', multiLiner('hello'));
 
 
 // STEP 8
@@ -84,8 +84,8 @@ const oldObject = function(array) {
   };
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 9
@@ -97,8 +97,8 @@ const newObject = array => ({
   thirdValue: array[2]
 });
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log('Hello from the new object function', newObject(['hi', 'hello', 'are you there?']));
 
 
 // STEP 10
@@ -108,45 +108,41 @@ const newObject = array => ({
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+const sum = (a, b, c, d) => a + b + c + d;
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+const objectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+let sumAndProduct = (a, b) => {
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
+let message = (name) => {
   return `Hello, ${name}!`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(message('Allie'));
 
 
-let Student = function(name, age, hometown) {
+let Student = function (name, age, hometown)  {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
@@ -154,45 +150,52 @@ let Student = function(name, age, hometown) {
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe);
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(joe);
 
 
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.greeting());
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(joe.greeting());
 
 
-Student.courseName = function() {
+Student.courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(Student.courseName());
 
 
 
 // STEP 11
 // How do arrow functions affect constructor functions?
-Student.prototype.scope = function() {
+// the arrow function make the "this" reach for a global property/argument?  which makes it look for a the next highest container... which is this case is a window. either way because the console.log of joe.scope is undefined... think this is because joe has been set as local variable by let...but the quesiton is what is scope?
+
+Student.prototype.scope = function () {
+  (console.log(this));
+};
+
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(joe.scope());
+
+
+Student.prototype.scopeArrow = function () { 
   console.log(this);
 };
 
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+// DONE: Uncomment the following line of code to see the output in the browser console
+console.log(joe.scopeArrow());
 
-Student.prototype.scopeArrow = () => console.log(this);
-
-// TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
-
-// TODO: Write a COMMENT below to answer the following questions.
+// DONE: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
+//ANSWER: "this" is trying to refer to joe, but joe was set as a local variable by using "let" when it was defined. 
 // 
 // 2. What is "this" when joe.scopeArrow() is invoked?
+//"this" in scoepArrow is invoked but because it is focused on this and let was how joe was defined it not able to call on the joe properites.
 //
 // 3. Explain why "this" is different when an arrow function is used.
-// 
+// This is different in an arrow because it is looking for the top container, to have a "context" so it will look at the highest container and apply "this" to refer to the to container object name. in both cases it seems to be the top window. 
